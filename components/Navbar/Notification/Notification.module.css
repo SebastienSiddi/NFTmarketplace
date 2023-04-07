@@ -6,7 +6,7 @@
   width: 25rem;
   border-radius: 1rem;
   left: -20rem;
-  top: 3.5rem;
+  top: 4rem;
   z-index: 222222222;
   background-color: var(--main-bg-color);
 }
@@ -57,10 +57,10 @@
   background-color: aqua;
 }
 
-@media screen and (max-width: 35rem) {
+@media screen and (max-width: 560px) {
   .notification {
-    width: 20rem;
-    left: -15rem;
+    width: 21rem;
+    left: -11rem;
   }
   .notification_box {
     padding: 0.3rem;

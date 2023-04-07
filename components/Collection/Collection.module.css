@@ -73,7 +73,7 @@
     }
 }
 
-@media screen and (min-device-width: 427px) and (max-device-width: 1024px) {
+@media screen and (min-device-width: 427px) and (max-device-width: 1024px){
     .collection_title{
         width: 90%;
     }

@@ -139,10 +139,17 @@
 
 .bigNFTSlider_box_right_box {
   position: relative;
+height: 64rem;
 }
 
 .bigNFTSlider_box_right_box_img {
   border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none; /* pour les navigateurs WebKit */
+  -moz-user-select: none; /* pour les navigateurs Firefox */
+  -ms-user-select: none; /* pour les navigateurs Microsoft */
+  user-select: none; /* standard */
 }
 
 .bigNFTSlider_box_right_box_like {
@@ -159,7 +166,7 @@
   border-radius: 5rem;
 }
 
-@media screen and (max-width: 65em) {
+@media screen and (max-width: 1040px) {
   .bigNFTSlider_box {
     width: 90%;
     padding-top: 28rem;

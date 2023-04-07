@@ -52,7 +52,7 @@ const Service = () => {
           <p className={Style.service_box_item_step}>
             <span>Step 3</span>
           </p>
-          <h3>Buy and Sell NFTs</h3>
+          <h3>Start trading</h3>
           <p>
             Once your wallet is connected, buying and selling NFTs is easy. You
             can complete transactions quickly and securely, knowing that our
@@ -69,7 +69,7 @@ const Service = () => {
           <p className={Style.service_box_item_step}>
             <span>Step 4</span>
           </p>
-          <h3>Start Trading</h3>
+          <h3>Earn money</h3>
           <p>
             Now that you have discovered, connected your wallet, and managed
             your NFTs, you're ready to start trading. Buy low, sell high, and

@@ -11,6 +11,11 @@ import {
   Filter,
   NFTCard,
   Collection,
+  FollowerTab,
+  AudioLive,
+  Slider,
+  Brand,
+  Video,
 } from "@/components/componentsindex";
 
 const Home = () => {
@@ -20,10 +25,18 @@ const Home = () => {
       <Service />
       <BigNFTSilder />
       <Title
-        heading="New Collection"
-        paragraph="Explore the NFTs in the most featured categories."
+        heading="Listen NFTs audio live"
+        paragraph="Click on music icon and enjoy NTF music or audio."
       />
-      <Collection/>
+      <AudioLive />
+      <FollowerTab />
+      <Slider />
+      <Collection />
+      <Subscribe />
+      <Title
+        heading="Featured NFTs"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
       <Filter />
       <NFTCard />
       <Title
@@ -31,7 +44,8 @@ const Home = () => {
         paragraph="Explore the NFTs in the most featured categories."
       />
       <Category />
-      <Subscribe />
+      <Brand />
+      <Video />
     </div>
   );
 };

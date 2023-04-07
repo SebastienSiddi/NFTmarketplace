@@ -1,45 +1,45 @@
 import React from "react";
 import Image from "next/image";
-
 import { MdVerified } from "react-icons/md";
 
-import Style from "./DaysComponents.module.css";
+//INTERNAL IMPORT
+import Style from "./DaysComponent.module.css";
 import images from "../../../img";
 
-const DaysComponents = () => {
+const DaysComponents = ({ el, i }) => {
   return (
     <div className={Style.daysComponent}>
       <div className={Style.daysComponent_box}>
         <div className={Style.daysComponent_box_img}>
           <Image
-            src={images.creatorbackground1}
+            src={el.background}
             className={Style.daysComponent_box_img_img}
             alt="profile background"
             width={500}
             height={300}
-            objectFit="covers"
+            style={{objectFit:"cover"}}
           />
         </div>
 
         <div className={Style.daysComponent_box_profile}>
           <Image
-            src={images.creatorbackground2}
+            src={images[`creatorbackground${i + 2}`]}
             alt="profile"
             width={200}
             height={200}
             className={Style.daysComponent_box_img_1}
-            objectFit="covers"
+            style={{objectFit:"cover"}}
           />
           <Image
-            src={images.creatorbackground2}
+            src={images[`creatorbackground${i + 4}`]}
             alt="profile"
             width={200}
             height={200}
             className={Style.daysComponent_box_img_2}
-            objectFit="covers"
+            style={{objectFit:"cover"}}
           />
           <Image
-            src={images.creatorbackground2}
+            src={images[`creatorbackground${i + 3}`]}
             alt="profile"
             width={200}
             height={200}
@@ -53,7 +53,7 @@ const DaysComponents = () => {
           <div className={Style.daysComponent_box_title_info}>
             <div className={Style.daysComponent_box_title_info_profile}>
               <Image
-                src={images.user1}
+                src={el.user}
                 alt="profile"
                 width={30}
                 height={30}
@@ -73,7 +73,7 @@ const DaysComponents = () => {
             </div>
 
             <div className={Style.daysComponent_box_title_info_price}>
-              <small>1.255 ETH</small>
+              <small>{i + 4}.255 ETH</small>
             </div>
           </div>
         </div>
