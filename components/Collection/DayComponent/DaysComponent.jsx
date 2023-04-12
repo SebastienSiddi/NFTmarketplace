@@ -44,7 +44,7 @@ const DaysComponents = ({ el, i }) => {
             width={200}
             height={200}
             className={Style.daysComponent_box_img_3}
-            objectFit="covers"
+            style={{objectFit:"cover"}}
           />
         </div>
 
@@ -57,7 +57,7 @@ const DaysComponents = ({ el, i }) => {
                 alt="profile"
                 width={30}
                 height={30}
-                objectFit="covers"
+                style={{objectFit:"cover"}}
                 className={Style.daysComponent_box_title_info_profile_img}
               />
 

@@ -57,7 +57,7 @@ const about = () => {
             </p>
           </div>
           <div className={Style.aboutus_box_hero_right}>
-            <Image src={images.hero2} width={688} height={407} className={Style.aboutus_box_hero_img}/>
+            <Image src={images.hero2} width={688} height={407} className={Style.aboutus_box_hero_img} alt="hero"/>
           </div>
         </div>
 

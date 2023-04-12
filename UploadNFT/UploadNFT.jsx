@@ -26,7 +26,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
 
   const router = useRouter();
 
-  const categoryArry = [
+  const categoryArray = [
     {
       image: images.nft_image_1,
       category: "Sports",
@@ -125,7 +125,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
           </p>
 
           <div className={Style.upload_box_slider_div}>
-            {categoryArry.map((el, i) => (
+            {categoryArray.map((el, i) => (
               <div
                 className={`${Style.upload_box_slider} ${
                   active == i + 1 ? Style.active : ""
@@ -218,7 +218,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
                 price,
                 image,
                 description,
-                router
+                router,
                 // website,
                 // royalties,
                 // fileSize,

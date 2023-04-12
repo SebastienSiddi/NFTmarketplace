@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { GrClose } from "react-icons/gr";
 import {
@@ -12,14 +13,17 @@ import {
   TiArrowSortedDown,
   TiArrowSortedUp,
 } from "react-icons/ti";
+import { DiJqueryLogo } from "react-icons/di";
 
 import Style from "./SideBar.module.css";
 import images from "../../../img";
 import Button from "../../Button/Button";
 
-const SideBar = ({ setOpenSideMenu }) => {
+const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
+
+  const router = useRouter();
 
   //-----DISCOVER NAVIGATION MENU
   const discover = [
@@ -104,7 +108,11 @@ const SideBar = ({ setOpenSideMenu }) => {
         onClick={() => closeSideBar()}
       />
       <div className={Style.sideBar_box}>
-        <Image src={images.logo} alt="logo" width={150} height={150} />
+        <p>
+          <a href="/">
+            <DiJqueryLogo className={Style.sideBar_box_logo} />
+          </a>
+        </p>
         <p>
           Discover the most outstanding articles on all topics of NFT & your own
           stories and share them
@@ -170,8 +178,16 @@ const SideBar = ({ setOpenSideMenu }) => {
       </div>
 
       <div className={Style.sideBar_button}>
-        <Button btnName="Create" handleClick={()=>{}}/>
-        <Button btnName="Connect Wallet" handleClick={()=>{}}/>
+        {currentAccount == "" ? (
+          <Button btnName="connect" handleClick={() => connectWallet()} />
+        ) : (
+          <Button
+            btnName="Create"
+            handleClick={() => router.push("/uploadNFT")}
+          />
+        )}
+
+        <Button btnName="Connect Wallet" handleClick={() => {}} />
       </div>
     </div>
   );
